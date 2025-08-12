@@ -1,0 +1,32 @@
+:root{
+  --bg: #fff;
+  --background: #fbf3e0;
+  --fg: #202124;
+  --border: #dadce0;
+  --shadow: 0 1px 6px rgba(32,33,36,.28);
+}
+
+*{box-sizing:border-box}
+html,body{
+  height:100%;
+  margin:0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  background: var(--background);
+  color: var(--fg);
+}
+
+.main_nav{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    flex: 1;
+    border-bottom:1px solid var(--border);
+}
+
+.main_div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
