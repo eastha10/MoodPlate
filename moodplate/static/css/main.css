@@ -1,0 +1,69 @@
+:root{
+  --bg: #fff;
+  --fg: #202124;
+  --border: #dadce0;
+  --shadow: 0 1px 6px rgba(32,33,36,.28);
+}
+
+/* 폼 컨테이너 */
+form{
+  width:900px;
+  display:flex;
+  align-items:center;
+  gap:.5rem;
+  padding:.6rem .8rem;
+  border:1px solid var(--border);
+  border-radius: 999px;
+  background:#fff;
+  box-shadow: none;
+  transition: box-shadow .15s ease, border-color .15s ease;
+  margin-top: 20%;
+}
+
+/* 포커스/호버 시 살짝 강조  */
+form:hover{ box-shadow: var(--shadow); border-color: transparent; }
+form:focus-within{ box-shadow: var(--shadow); border-color: transparent; }
+
+/* 입력창 */
+form input[type="text"]{ 
+  flex:1;
+  height: 44px;
+  font-size: 16px;
+  border:0;
+  outline:0;
+  background:transparent;
+  padding:0 .6rem;
+}
+
+/* 플레이스홀더 톤 다운 */
+form input::placeholder{
+  color:#80868b;
+}
+
+/* 제출 버튼(돋보기 아이콘) */
+form button{
+  border:0;
+  background:transparent;
+  width:44px; height:44px;
+  border-radius:50%;
+  display:grid; place-items:center;
+  cursor:pointer;
+  transition: background-color .15s ease;
+}
+
+form button:hover{ background:#f1f3f4; }
+form button:active{ background:#e8eaed; }
+
+/* SVG 아이콘 크기 조정 (HTML에 width/height 있어도 덮어쓰기) */
+form button svg{
+  width:24px; height:24px;
+  fill:#5f6368;
+}
+
+/* 모바일 최적화 */
+@media (max-width:480px){
+  form{ padding:.4rem .6rem; }
+  form input[type="text"]{ height:40px; font-size:15px; }
+  form button{ width:40px; height:40px; }
+  form button svg{ width:22px; height:22px; }
+}
