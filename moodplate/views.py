@@ -2,4 +2,7 @@ from django.shortcuts import render
 
 # Create your views here.
 def main(request):
-    return render(request, 'main.html')
+    prompt = request.GET.get('prompt', '')
+    print("prompt: ",prompt)
+    context = {'prompt': prompt}
+    return render(request, 'main.html',context)
